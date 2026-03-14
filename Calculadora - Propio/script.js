@@ -5,6 +5,7 @@ const escritura = contenedor.querySelector('.render-numbers span');
 const clearCalc = () => escritura.innerHTML = "";
 
 contenedor.addEventListener('click', (e) => {
+    
     const btn = e.target.closest('.btn-tecla');
 
     if(!btn || btn.classList.contains('btn-clear')) {
@@ -19,6 +20,7 @@ contenedor.addEventListener('click', (e) => {
         try{
             let resultado = eval(escritura.innerHTML);
             escritura.innerHTML = Number(resultado.toFixed(2));
+            setTimeout(clearCalc, 4000);
         }
         catch{
             escritura.innerHTML = "Error";
@@ -31,5 +33,6 @@ contenedor.addEventListener('click', (e) => {
             escritura.innerHTML += valor;
         }
     }
+        
 });
 
