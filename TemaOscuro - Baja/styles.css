@@ -49,14 +49,5 @@ body{
     transition-duration: .2s;
 }
 
-.dark-mode{
-    background-color: #212121;
-    color: white;
-}
-
-.light-mode{
-    background-color: white;
-    color: #212121;
-}
 
 
